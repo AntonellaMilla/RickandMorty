@@ -16,11 +16,11 @@ const ItemList = () => {
   }, []);
 
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={2} columns={{ xs: 4, sm: 8, md: 12 }}>
       {loading
         ? [...Array(8)].map((_, i) => <LoadingSkeleton key={i} />)
         : items.map(item => (
-            <Grid item xs={12} sm={6} md={4} key={item.id}>
+            <Grid xs={4} sm={4} md={4}>
               <ItemCard {...item} />
             </Grid>
           ))}

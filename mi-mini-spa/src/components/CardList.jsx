@@ -1,8 +1,4 @@
-import { Grid } from '@mui/material';
-import { Box, Typography } from '@mui/material';
-import { Button } from '@mui/material';
-
-
+import { Grid, Box, Typography, Button } from '@mui/material';
 
 const cards = [
   { id: 1, title: 'Dimensión C-137', description: 'La dimensión original de Rick.', image: 'https://via.placeholder.com/300x200' },
@@ -16,24 +12,33 @@ const cards = [
 const CardList = () => {
   return (
     <Box p={4}>
-      <Typography variant="h4" mb={3}>Tarjetas Destacadas</Typography>
+      <Typography variant="h4" mb={3}>
+        Tarjetas Destacadas
+      </Typography>
       <Grid container spacing={2} columns={{ xs: 4, sm: 8, md: 12 }}>
-
-        {cards.map(card => (
+        {cards.map((card) => (
           <Grid xs={4} sm={4} md={4}>
             <Box
               sx={{
                 border: '1px solid #ccc',
                 borderRadius: '10px',
                 overflow: 'hidden',
-                boxShadow: 3
+                boxShadow: 3,
               }}
             >
-              <img src={card.image} alt={card.title} style={{ width: '100%', height: 200, objectFit: 'cover' }} />
+              <img
+                src={card.image}
+                alt={card.title}
+                style={{ width: '100%', height: 200, objectFit: 'cover' }}
+              />
               <Box p={2}>
                 <Typography variant="h6">{card.title}</Typography>
-                <Typography variant="body2" color="text.secondary">{card.description}</Typography>
-                <Button size="small" sx={{ mt: 1 }} disabled>Ver más</Button>
+                <Typography variant="body2" color="text.secondary">
+                  {card.description}
+                </Typography>
+                <Button size="small" sx={{ mt: 1 }} disabled>
+                  Ver más
+                </Button>
               </Box>
             </Box>
           </Grid>

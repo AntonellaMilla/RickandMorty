@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import Header from './components/Header';       // <- en minúscula
 import Home from './components/Home';
 import ItemsPage from './components/ItemsPage';
 import ContactPage from './components/ContactPage';
