@@ -1,0 +1,9 @@
+.card {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
